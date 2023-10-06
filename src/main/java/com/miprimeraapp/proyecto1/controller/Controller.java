@@ -44,7 +44,7 @@ public class Controller {
 
     @GetMapping("/misaludo")
     public ResponseEntity<?> saludoRequestPararam(@RequestParam String name,@RequestParam String lastName) {
-        ResponseGreetingDto respuesta = new ResponseGreetingDto("Hola" + name +" "+ lastName);
+        ResponseGreetingDto respuesta = new ResponseGreetingDto("Hola " + name +" "+ lastName);
         return new ResponseEntity<>(respuesta, HttpStatus.OK);
     }
 
